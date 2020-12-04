@@ -7,7 +7,6 @@ import useAuthUser from '../hooks/useAuthUser';
 
 const uiConfig = {
   signInFlow: 'popup',
-  signInSuccessUrl: '/',
   signInOptions: [firebase.auth.GoogleAuthProvider.PROVIDER_ID],
 };
 
