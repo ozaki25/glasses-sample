@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+import Router from './routes/router';
 
 const {
   REACT_APP_FIREBASE_API_KEY,
@@ -27,7 +28,7 @@ function App() {
   }, []);
   return (
     <div>
-      <h1>Hello</h1>
+      <Router />
       <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
     </div>
   );
