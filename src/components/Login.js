@@ -15,8 +15,7 @@ function Login() {
   const { setAuthUser } = useAuthUser();
   useEffect(() => {
     firebase.auth().onAuthStateChanged(user => {
-      console.log(user);
-      if (user) setAuthUser(user.providerData);
+      if (user) setAuthUser(user.providerData[0]);
     });
   }, [setAuthUser]);
   return (
