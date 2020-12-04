@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import useAuthUser from '../hooks/useAuthUser';
+import LogoutButton from '../components/LogoutButton';
 
 function Hello() {
   const { authUser } = useAuthUser();
@@ -12,7 +13,10 @@ function Hello() {
         <p>メールアドレス: {authUser.email}</p>
         <p>電話番号: {authUser.phoneNumber || '登録なし'}</p>
       </div>
-      <Link to="/home">home</Link>
+      <p>
+        <Link to="/home">home</Link>
+      </p>
+      <LogoutButton />
     </div>
   );
 }
