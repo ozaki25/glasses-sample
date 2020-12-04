@@ -1,18 +1,18 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from '../components/Home';
-import Hello from '../components/Hello';
+import Home from '../pages/Home';
+import Hello from '../pages/Hello';
 
 function Router() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" exact>
+        <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/home" exact>
+        <Route exact path="/home">
           <Home />
         </Route>
-        <Route path="/hello" exact>
+        <Route exact path="/hello">
           <Hello />
         </Route>
       </Switch>

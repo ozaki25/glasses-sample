@@ -1,6 +1,6 @@
 import Router from './routes/router';
 import firebase, { config } from './utils/firebase';
-import Login from './components/Login';
+import Login from './pages/Login';
 import useAuthUser from './hooks/useAuthUser';
 
 firebase.initializeApp(config);
