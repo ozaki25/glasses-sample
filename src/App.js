@@ -1,16 +1,6 @@
-import firebase from 'firebase/app';
+import { init } from './utils/firebase';
 
-const {
-  REACT_APP_FIREBASE_API_KEY,
-  REACT_APP_FIREBASE_PROJECT_ID,
-} = process.env;
-
-const config = {
-  apiKey: REACT_APP_FIREBASE_API_KEY,
-  authDomain: REACT_APP_FIREBASE_PROJECT_ID,
-};
-
-firebase.initializeApp(config);
+init();
 
 function App() {
   return (
