@@ -1,6 +1,6 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from '../components/Home';
-import Hello from '../components/Hello';
+import Home from '../pages/Home';
+import Hello from '../pages/Hello';
 
 function Router() {
   return (
