@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
@@ -20,9 +21,10 @@ const uiConfig = {
 
 firebase.initializeApp(config);
 
-console.log({ config });
-
 function App() {
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged(user => console.log(user.providerData));
+  }, []);
   return (
     <div>
       <h1>Hello</h1>
