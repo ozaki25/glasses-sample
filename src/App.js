@@ -1,18 +1,8 @@
 import { useEffect } from 'react';
-import firebase from 'firebase/app';
 import 'firebase/auth';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import Router from './routes/router';
-
-const {
-  REACT_APP_FIREBASE_API_KEY,
-  REACT_APP_FIREBASE_PROJECT_ID,
-} = process.env;
-
-const config = {
-  apiKey: REACT_APP_FIREBASE_API_KEY,
-  authDomain: REACT_APP_FIREBASE_PROJECT_ID,
-};
+import firebase, { config } from './utils/firebase';
 
 const uiConfig = {
   signInFlow: 'popup',
